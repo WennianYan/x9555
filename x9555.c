@@ -622,7 +622,7 @@ rt_bool_t x9555_pin_read(x9555_device_t device, rt_uint8_t pin, rt_uint8_t pin_m
 
 /****************************************************************************************/
 
-RT_WEAK void call_input_interrupt(void *args)
+__attribute__((weak)) void call_input_interrupt(void *args)
 {
     rt_kprintf("Complete your own interrupt service program in the other file.\n");
 }
