@@ -42,14 +42,14 @@ enum X9555_PIN_STATE
     X9555_PIN_LOW = 0x00,
     X9555_PIN_HIGH = 0x01,
     X9555_PIN_NULL = 0x02
-} x9555_pin_state;
+};
 
 enum X9555_PORT
 {
     X9555_PORT_0 = 0x00,
     X9555_PORT_1 = 0x01,
     X9555_PORT_NULL = 0x02
-} x9555_port;
+};
 
 enum X9555_IO_PORT_0
 {
@@ -61,7 +61,7 @@ enum X9555_IO_PORT_0
     X9555_IO_0_5 = 5,
     X9555_IO_0_6 = 6,
     X9555_IO_0_7 = 7
-} x9555_io_port_0;
+};
 
 enum X9555_IO_PORT_1
 {
@@ -73,14 +73,14 @@ enum X9555_IO_PORT_1
     X9555_IO_1_5 = 15,
     X9555_IO_1_6 = 16,
     X9555_IO_1_7 = 17
-} x9555_io_port_1;
+};
 
 enum X9555_MODE
 {
     X9555_OUTPUT = 0x00,
     X9555_INPUT = 0x01,
     X9555_POLARITY_INVERSION = 0x02
-} x9555_mode;
+};
 
 struct x9555_device
 {
