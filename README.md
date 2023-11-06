@@ -42,7 +42,6 @@ RT-Thread online packages
 
 - `x9555: I/O expander with interrupt, weak pull-up & config registers`：选择使用 `x9555` 软件包；
 - `Enable X9555  example` : 选择使用 `x9555` 软件包的调试例程；
-- `Config X9555 Hardware` : 配置 `x9555` 软件包的硬件（如果其他文件中未配置：避免重复配置。）
 - `Version`：配置软件包版本，默认最新版本。
 
 然后让 RT-Thread 的包管理器自动更新，或者使用 `pkgs --update` 命令更新包到 BSP 中。
