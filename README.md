@@ -16,7 +16,6 @@ x9555 软件包提供了x9555 系列 I/0 扩展器的全部操作功能。本文
 | SConscript | RT-Thread 默认的构建脚本 |
 | README.md | 软件包使用说明 |
 | datasheet | 官方数据手册 |
-| image | 配置文件图片 |
 
 ### 1.2 许可证
 
@@ -34,19 +33,16 @@ x9555 软件包遵循  Apache-2.0 许可，详见 LICENSE 文件。
 RT-Thread online packages
     peripheral libraries and drivers  --->
         [*] x9555: I/O expander with interrupt, weak pull-up & config registers  --->
+        [*]   Enable X9555  example ----
+        [*]   Config X9555 Hardware--->
+        Version (latest)  --->
 ```
-1. ENV配置方法：
-![Alt text](image/image.png)
-![Alt text](image/image-1.png)
-![Alt text](image/image-2.png)
-![Alt text](image/image-3.png)
-
-2. RT-Studio配置方法：
-   ![Alt text](image/image-7.png)
 
 每个功能的配置说明如下：
 
 - `x9555: I/O expander with interrupt, weak pull-up & config registers`：选择使用 `x9555` 软件包；
+- `Enable X9555  example` : 选择使用 `x9555` 软件包的调试例程；
+- `Config X9555 Hardware` : 配置 `x9555` 软件包的硬件（如果其他文件中未配置：避免重复配置。）
 - `Version`：配置软件包版本，默认最新版本。
 
 然后让 RT-Thread 的包管理器自动更新，或者使用 `pkgs --update` 命令更新包到 BSP 中。
@@ -203,16 +199,7 @@ rt_bool_t x9555_pin_read(x9555_device_t device, rt_uint8_t pin,rt_uint8_t pin_mo
 ### 3.2 Finsh/MSH 测试命令
 
 x9555 软件包提供了丰富的测试命令，项目只要在 RT-Thread 上开启 Finsh/MSH 功能即可。在做一些基于 `x9555` 的应用开发、调试时，这些命令会非常实用。具体功能可以输入 `x9555` ，可以查看完整的命令列表。
-1. env配置方法：
-a. 使能x9555 软件包 Example： `Enable x9555 example`
-![Alt text](image/image-4.png)
-b. 配置x9555 软件包 Example 使用到的硬件（前提是其他文件内没有相关的配置）： `Enable x9555 example hardware`
-![Alt text](image/image-5.png)
-c. 配置硬件信息：
-![Alt text](image/image-6.png)
 
-2. RT-Studio 配置方法：
-   ![Alt text](image/image-8.png)
 ```
 msh >x9555
 Usage:
